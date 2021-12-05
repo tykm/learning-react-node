@@ -1,3 +1,5 @@
+I am following the "How to Create a React App with a Node Backend: The Complete Guide" guide!
+
 Rquirements:
 1. Node and NPM - nodejs.org
 2. Git
