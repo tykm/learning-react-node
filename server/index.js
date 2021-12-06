@@ -12,10 +12,12 @@ app.get("/api", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 
+// Creating an endpoint that resolves to index.html whenever we request anything other than /api
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
+// This app listens on the port!
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
