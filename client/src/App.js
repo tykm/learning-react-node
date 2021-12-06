@@ -1,5 +1,5 @@
-import React from "react";
-import logo from "./logo.svg";
+import React from 'react';
+import { Textbox } from './components/Textbox.js'
 import "./App.css";
 
 function App() {
@@ -9,13 +9,12 @@ function App() {
     fetch("/api")
       .then((res) => res.json())
       .then((data) => setData(data.message));
-  }, []);
+  }, [data]);
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
+        <p>{ Textbox() }</p>
       </header>
     </div>
   );
